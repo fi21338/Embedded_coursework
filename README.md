@@ -19,3 +19,17 @@
 - 6.5
 - 6.6
 - 6.7
+
+## Deadline 1: November 11 (Monday)
+- task 1 (damian)
+- task 2 (damian)
+- task 4 (art)
+- task 5 (younis)
+
+## Deadline 2: November 18 (Monday)
+- Task 3
+- All code questions from task 6 done
+
+## Deadline 3: November 25 (Monday)
+- All code tasks done (1-5)
+- Task 6 done + report 
