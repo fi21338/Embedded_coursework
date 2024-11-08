@@ -2,8 +2,8 @@
 
 ## Task responsabilities 
 ### Damian
-- Task 1
-- Task 2
+- Task 1 ✅
+- Task 2 ✅
 - 6.2
 - 6.4
 - 6.9
