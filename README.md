@@ -14,10 +14,10 @@
 - 6.8
 - 6.10
 ### Art
-- Task 4 ✅
+- Task 4 
 - 6.3 ✅
 - 6.5
-- 6.6
+- 6.6✅
 - 6.7
 
 ## Deadline 1: November 11 (Monday)
