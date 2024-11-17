@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker PC v22.6.1                     
 ******************************************************************************
->> Linked Sun Nov 17 14:55:36 2024
+>> Linked Sun Nov 17 15:04:49 2024
 
 OUTPUT FILE NAME:   <IPC_CPU_02_Mem_Ex.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 0000b794
@@ -14,7 +14,7 @@ MEMORY CONFIGURATION
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000080   00000380  0000001e  00000362  RWIX
-  RAMLS0                00008000   00000800  0000013f  000006c1  RWIX
+  RAMLS0                00008000   00000800  00000139  000006c7  RWIX
   RAMLS1                00008800   00000800  00000000  00000800  RWIX
   RAMLS2                00009000   00000800  00000000  00000800  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
@@ -500,17 +500,17 @@ CpuSysRegsFile
 *          1    0005d300    00000082     UNINITIALIZED
                   0005d300    00000082     F2837xD_GlobalVariableDefs.obj (CpuSysRegsFile)
 
-.text.1    0    00008000    0000013f     
-                  00008000    00000036     Lab9_cpu02.obj (.text:retain)
-                  00008036    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
-                  0000805f    00000028     F2837xD_PieCtrl.obj (.text)
-                  00008087    00000028     Lab9_cpu02.obj (.text)
-                  000080af    00000026     F2837xD_PieVect.obj (.text)
-                  000080d5    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
-                  000080f9    0000001d                       : memcpy.c.obj (.text)
-                  00008116    00000018                       : ll_aox28.asm.obj (.text)
-                  0000812e    00000009                       : _lock.c.obj (.text)
-                  00008137    00000008     F2837xD_CodeStartBranch.obj (.text)
+.text.1    0    00008000    00000139     
+                  00008000    00000030     Lab9_cpu02.obj (.text:retain)
+                  00008030    00000029     rts2800_fpu32.lib : exit.c.obj (.text)
+                  00008059    00000028     F2837xD_PieCtrl.obj (.text)
+                  00008081    00000028     Lab9_cpu02.obj (.text)
+                  000080a9    00000026     F2837xD_PieVect.obj (.text)
+                  000080cf    00000024     rts2800_fpu32.lib : cpy_tbl.c.obj (.text)
+                  000080f3    0000001d                       : memcpy.c.obj (.text)
+                  00008110    00000018                       : ll_aox28.asm.obj (.text)
+                  00008128    00000009                       : _lock.c.obj (.text)
+                  00008131    00000008     F2837xD_CodeStartBranch.obj (.text)
 
 .text.2    0    0000b000    000007ff     
                   0000b000    00000585     F2837xD_DefaultISR.obj (.text:retain)
@@ -529,12 +529,12 @@ MODULE SUMMARY
        F2837xD_DefaultISR.obj           1413   0                  0                 
        F2837xD_SysCtrl.obj              527    0                  0                 
        F2837xD_PieVect.obj              38     448                0                 
-       Lab9_cpu02.obj                   94     0                  41                
+       Lab9_cpu02.obj                   88     0                  41                
        F2837xD_PieCtrl.obj              40     0                  0                 
        F2837xD_CodeStartBranch.obj      10     0                  0                 
        F2837xD_usDelay.obj              4      0                  0                 
     +--+--------------------------------+------+------------------+--------------------+
-       Total:                           2126   448                6547              
+       Total:                           2120   448                6547              
                                                                                     
     C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32.lib
        boot28.asm.obj                   86     0                  0                 
@@ -551,7 +551,7 @@ MODULE SUMMARY
                                                                                     
        Stack:                           0      0                  512               
     +--+--------------------------------+------+------------------+--------------------+
-       Grand Total:                     2372   472                7069              
+       Grand Total:                     2366   472                7069              
 
 
 GLOBAL DATA SYMBOLS: SORTED BY DATA PAGE
@@ -718,10 +718,10 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 page  address   name                            
 ----  -------   ----                            
 abs   ffffffff  .text                           
-0     00008036  C$$EXIT                         
-0     00008116  LL$$AND                         
-0     0000811e  LL$$OR                          
-0     00008126  LL$$XOR                         
+0     00008030  C$$EXIT                         
+0     00008110  LL$$AND                         
+0     00008118  LL$$OR                          
+0     00008120  LL$$XOR                         
 0     0000b0be  _ADCA1_ISR                      
 0     0000b33e  _ADCA2_ISR                      
 0     0000b348  _ADCA3_ISR                      
@@ -864,7 +864,7 @@ abs   ffffffff  .text
 1     00047800  _Emif2Regs                      
 1     00000d01  _EmuBMode                       
 1     00000d00  _EmuKey                         
-0     0000807e  _EnableInterrupts               
+0     00008078  _EnableInterrupts               
 0     0000009a  _F28x_usDelay                   
 0     0000b528  _FLASH_CORRECTABLE_ERROR_ISR    
 0     0000b3fc  _FPU_OVERFLOW_ISR               
@@ -889,8 +889,8 @@ abs   ffffffff  .text
 0     0000b42e  _IPC3_ISR                       
 0     0000b651  _InitAuxPll                     
 0     0000b58a  _InitPeripheralClocks           
-0     0000805f  _InitPieCtrl                    
-0     000080af  _InitPieVectTable               
+0     00008059  _InitPieCtrl                    
+0     000080a9  _InitPieVectTable               
 0     0000b585  _InitSysCtrl                    
 1     00050000  _IpcRegs                        
 0     0000b230  _MCBSPA_RX_ISR                  
@@ -986,21 +986,21 @@ abs   ffffffff  ___pinit__
 abs   ffffffff  ___text__                       
 0     0000b7ea  __args_main                     
 1     0000a9ee  __lock                          
-0     00008136  __nop                           
-0     00008132  __register_lock                 
-0     0000812e  __register_unlock               
+0     00008130  __nop                           
+0     0000812c  __register_lock                 
+0     00008128  __register_unlock               
 1     00000400  __stack                         
 0     0000b7fe  __system_post_cinit             
 0     0000b7fc  __system_pre_init               
 1     0000a9f0  __unlock                        
-0     00008036  _abort                          
+0     00008030  _abort                          
 0     0000b794  _c_int00                        
-0     000080d5  _copy_in                        
-0     00008038  _exit                           
+0     000080cf  _copy_in                        
+0     00008032  _exit                           
 1     0000a9f2  _i                              
 0     00008000  _ipc2_isr                       
-0     00008087  _main                           
-0     000080f9  _memcpy                         
+0     00008081  _main                           
+0     000080f3  _memcpy                         
 1     0000a9c0  _shared_array_C2                
 abs   ffffffff  binit                           
 0     00000080  cinit                           
@@ -1019,21 +1019,21 @@ page  address   name
 0     0000009a  _F28x_usDelay                   
 0     00000ce0  _Cla1SoftIntRegs                
 0     00008000  _ipc2_isr                       
-0     00008036  C$$EXIT                         
-0     00008036  _abort                          
-0     00008038  _exit                           
-0     0000805f  _InitPieCtrl                    
-0     0000807e  _EnableInterrupts               
-0     00008087  _main                           
-0     000080af  _InitPieVectTable               
-0     000080d5  _copy_in                        
-0     000080f9  _memcpy                         
-0     00008116  LL$$AND                         
-0     0000811e  LL$$OR                          
-0     00008126  LL$$XOR                         
-0     0000812e  __register_unlock               
-0     00008132  __register_lock                 
-0     00008136  __nop                           
+0     00008030  C$$EXIT                         
+0     00008030  _abort                          
+0     00008032  _exit                           
+0     00008059  _InitPieCtrl                    
+0     00008078  _EnableInterrupts               
+0     00008081  _main                           
+0     000080a9  _InitPieVectTable               
+0     000080cf  _copy_in                        
+0     000080f3  _memcpy                         
+0     00008110  LL$$AND                         
+0     00008118  LL$$OR                          
+0     00008120  LL$$XOR                         
+0     00008128  __register_unlock               
+0     0000812c  __register_lock                 
+0     00008130  __nop                           
 0     0000b000  _TIMER1_ISR                     
 0     0000b00a  _TIMER2_ISR                     
 0     0000b014  _DATALOG_ISR                    

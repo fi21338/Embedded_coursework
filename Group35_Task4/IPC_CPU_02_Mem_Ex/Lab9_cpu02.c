@@ -66,8 +66,8 @@ interrupt void ipc2_isr(void)
     }
 
     // Increment the received data and send it back to CPU1
-    IpcRegs.IPCSENDDATA = (Uint16) receivedata + 2;
-    IpcRegs.IPCSET.bit.IPC0 = 1; // Set IPC0 flag to notify CPU1
+    //IpcRegs.IPCSENDDATA = (Uint16) receivedata + 2;
+    //IpcRegs.IPCSET.bit.IPC0 = 1; // Set IPC0 flag to notify CPU1
 
     // Return from interrupt
     IpcRegs.IPCACK.bit.IPC1 = 1;           // Clear IPC1 flag to acknowledge CPU1
