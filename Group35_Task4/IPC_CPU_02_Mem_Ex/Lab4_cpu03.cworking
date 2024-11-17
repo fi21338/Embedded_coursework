@@ -1,0 +1,71 @@
+// FILE:   Lab4_cpu02.c
+
+#include "F28x_Project.h"
+
+// Function Prototypes
+interrupt void ipc2_isr(void);
+
+
+
+
+void main(void)
+{
+// Initialize System Control
+   InitSysCtrl();
+
+// Clear all interrupts and initialize PIE control registers
+	DINT;
+	InitPieCtrl();
+
+// Disable CPU interrupts and clear all CPU interrupt flags
+	IER = 0x0000;
+	IFR = 0x0000;
+
+// Initialize the PIE vector table
+	InitPieVectTable();
+
+// Map ISR functions
+	EALLOW;
+	PieVectTable.IPC1_INT = &ipc2_isr;		// IPC1 interrupt
+	EDIS;
+
+
+//	 CPU2 to cancel an event, it can set the appropriate bit in its IPCCLR register
+    IpcRegs.IPCCLR.bit.IPC0 = 1;   //
+    PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;
+
+//enable PIE interrupts
+    PieCtrlRegs.PIEIER1.bit.INTx14 = 1;		// Enable IPC1 ISR
+    PieCtrlRegs.PIEIFR1.bit.INTx13 = 1;		// Force first IPC0 transfer
+
+// Enable global interrupts and higher priority real-time debug events:
+	IER |= M_INT1; 						// Enable group 1 interrupts
+	EINT;       						// Enable Global interrupt INTM
+	ERTM;   							// Enable Global real-time interrupt DBGM
+
+// Let CPU1 know that CPU2 is ready
+	IpcRegs.IPCSET.bit.IPC17 = 1;		// Set IPC17 to release CPU1
+
+	while(1)
+	{
+		;
+	}
+}
+
+
+interrupt void ipc2_isr(void)
+{
+	// Read back ADC-A0 results and store in circular buffer
+unsigned int receivedata = (Uint16) IpcRegs.IPCRECVDATA;
+
+
+
+	IpcRegs.IPCSENDDATA = (Uint16) receivedata +1;
+	IpcRegs.IPCSET.bit.IPC0 = 1;				// Set IPC0 bit for CPU1
+
+	// Return from interrupt
+	IpcRegs.IPCACK.bit.IPC1 = 1;				// Clear IPC1 bit
+	PieCtrlRegs.PIEACK.all = PIEACK_GROUP1;		// Acknowledge PIE group 1 to enable further interrupts
+}
+
+// end of file
