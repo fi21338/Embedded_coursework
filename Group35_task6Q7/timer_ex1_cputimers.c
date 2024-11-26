@@ -191,7 +191,7 @@ cpuTimer0ISR(void)
 {
   milliseconds++;
   GPIO_togglePin(DEVICE_GPIO_PIN_LED1);
-  while(milliseconds > 1000){
+  while(milliseconds > 999){
       milliseconds = 0;
       seconds++;
       if(seconds >59){
