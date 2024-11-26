@@ -108,8 +108,8 @@ void main(void)
     while(!done)        // wait until the DMA transfer is complete
     {
        DMA_forceTrigger(DMA_CH6_BASE);
-       SysCtl_delay(100);
-       DEVICE_DELAY_US(10);
+       DEVICE_DELAY_US(1000);
+
     }
 
     //

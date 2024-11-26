@@ -1,7 +1,7 @@
 ******************************************************************************
              TMS320C2000 Linker Unix v22.6.1                   
 ******************************************************************************
->> Linked Tue Nov 26 12:14:58 2024
+>> Linked Tue Nov 26 12:31:54 2024
 
 OUTPUT FILE NAME:   <Group35_task5.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -14,7 +14,7 @@ MEMORY CONFIGURATION
 PAGE 0:
   BEGIN                 00000000   00000002  00000002  00000000  RWIX
   RAMM0                 00000123   000002dd  00000094  00000249  RWIX
-  RAMLS0                00008000   00000800  000006c0  00000140  RWIX
+  RAMLS0                00008000   00000800  000006be  00000142  RWIX
   RAMLS1                00008800   00000800  00000000  00000800  RWIX
   RAMLS2                00009000   00000800  00000000  00000800  RWIX
   RAMLS3                00009800   00000800  00000000  00000800  RWIX
@@ -126,7 +126,7 @@ GETWRITEIDX
 PUTREADIDX 
 *          0    0003f800    00000000     DSECT
 
-.text.1    0    00008000    000006c0     
+.text.1    0    00008000    000006be     
                   00008000    00000090     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_selectXTAL)
                   00008090    00000088     rts2800_fpu32_eabi.lib : fs_div28.asm.obj (.text)
                   00008118    00000068     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_getDeviceParametric)
@@ -161,35 +161,35 @@ PUTREADIDX
                   0000861f    00000011                        : sysctl.obj (.text:CPUTimer_setPeriod)
                   00008630    0000000f                        : sysctl.obj (.text:SysCtl_pollCpuTimer)
                   0000863f    0000000e                        : gpio.obj (.text:GPIO_isPinValid)
-                  0000864d    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
-                  0000865a    0000000d                        : interrupt.obj (.text:Interrupt_enableGlobal)
-                  00008667    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
-                  00008674    0000000c                            : args_main.c.obj (.text)
-                  00008680    0000000a     driverlib_eabi.lib : interrupt.obj (.text:Interrupt_illegalOperationHandler)
-                  0000868a    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
-                  00008694    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
-                  0000869d    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
-                  000086a6    00000008     F2837xD_CodeStartBranch.obj (.text)
-                  000086ae    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
-                  000086b6    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
-                  000086bd    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
-                  000086bf    00000001                            : startup.c.obj (.text)
+                  0000864d    0000000d                        : interrupt.obj (.text:Interrupt_enableGlobal)
+                  0000865a    0000000d     rts2800_fpu32_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init_nomemset)
+                  00008667    0000000c                            : args_main.c.obj (.text)
+                  00008673    0000000b     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
+                  0000867e    0000000a                        : interrupt.obj (.text:Interrupt_illegalOperationHandler)
+                  00008688    0000000a                        : interrupt.obj (.text:Interrupt_nmiHandler)
+                  00008692    00000009                        : sysctl.obj (.text:SysCtl_serviceWatchdog)
+                  0000869b    00000009     rts2800_fpu32_eabi.lib : _lock.c.obj (.text)
+                  000086a4    00000008     F2837xD_CodeStartBranch.obj (.text)
+                  000086ac    00000008     rts2800_fpu32_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none)
+                  000086b4    00000007     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_resetMCD)
+                  000086bb    00000002     rts2800_fpu32_eabi.lib : pre_init.c.obj (.text)
+                  000086bd    00000001                            : startup.c.obj (.text)
 
 .text.2    0    0000b000    00000800     
                   0000b000    000003ff     device.obj (.text)
                   0000b3ff    00000209     driverlib_eabi.lib : sysctl.obj (.text:SysCtl_setClock)
-                  0000b608    00000150     dma_ex1_gsram_transfer.obj (.text)
-                  0000b758    0000009d     driverlib_eabi.lib : dma.obj (.text:DMA_configMode)
-                  0000b7f5    0000000b                        : sysctl.obj (.text:SysCtl_isMCDClockFailureDetected)
+                  0000b608    0000014e     dma_ex1_gsram_transfer.obj (.text)
+                  0000b756    0000009d     driverlib_eabi.lib : dma.obj (.text:DMA_configMode)
+                  0000b7f3    0000000d                        : interrupt.obj (.text:Interrupt_disableGlobal)
 
 MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
     ./
-       dma_ex1_gsram_transfer.obj    411    83        201    
+       dma_ex1_gsram_transfer.obj    409    83        201    
     +--+-----------------------------+------+---------+---------+
-       Total:                        411    83        201    
+       Total:                        409    83        201    
                                                              
     ./device/
        device.obj                    1023   19        6      
@@ -224,7 +224,7 @@ MODULE SUMMARY
        Stack:                        0      0         256    
        Linker Generated:             0      143       0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  3782   814       473    
+       Grand Total:                  3780   814       473    
 
 
 LINKER GENERATED COPY TABLES
@@ -272,7 +272,7 @@ page  address   name
 0     0000847c  C$$EXIT                                  
 0     000084cd  DMA_configAddresses                      
 0     000082dd  DMA_configBurst                          
-0     0000b758  DMA_configMode                           
+0     0000b756  DMA_configMode                           
 0     000082a1  DMA_configTransfer                       
 0     0000b273  Device_bootCPU2                          
 0     0000b242  Device_configureTMXAnalogTrim            
@@ -294,10 +294,10 @@ page  address   name
 0     00008382  GPIO_setQualificationMode                
 0     000085d1  Interrupt_defaultHandler                 
 0     000083b9  Interrupt_enable                         
-0     00008680  Interrupt_illegalOperationHandler        
+0     0000867e  Interrupt_illegalOperationHandler        
 0     00008264  Interrupt_initModule                     
 0     00008534  Interrupt_initVectorTable                
-0     0000868a  Interrupt_nmiHandler                     
+0     00008688  Interrupt_nmiHandler                     
 0     00000123  SysCtl_delay                             
 0     00008180  SysCtl_getClock                          
 0     00008118  SysCtl_getDeviceParametric               
@@ -315,25 +315,25 @@ abs   00000100  __TI_STACK_SIZE
 0     00008451  __TI_auto_init_nobinit_nopinit           
 1     0000aaaa  __TI_cleanup_ptr                         
 0     00008421  __TI_decompress_lzss                     
-0     000086ae  __TI_decompress_none                     
+0     000086ac  __TI_decompress_none                     
 1     0000aaac  __TI_dtors_ptr                           
 1     0000aaa8  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
 abs   ffffffff  __TI_prof_data_size                      
 abs   ffffffff  __TI_prof_data_start                     
-0     00008667  __TI_zero_init_nomemset                  
+0     0000865a  __TI_zero_init_nomemset                  
 0     00008090  __c28xabi_divf                           
 n/a   UNDEFED   __c_args__                               
 0     0000b3ed  __error__                                
 1     00000400  __stack                                  
-0     00008674  _args_main                               
+0     00008667  _args_main                               
 0     000085ba  _c_int00                                 
 1     0000aaae  _lock                                    
-0     000086a5  _nop                                     
-0     000086a1  _register_lock                           
-0     0000869d  _register_unlock                         
-0     000086bf  _system_post_cinit                       
-0     000086bd  _system_pre_init                         
+0     000086a3  _nop                                     
+0     0000869f  _register_lock                           
+0     0000869b  _register_unlock                         
+0     000086bd  _system_post_cinit                       
+0     000086bb  _system_pre_init                         
 1     0000aab0  _unlock                                  
 0     0000847c  abort                                    
 1     0000c000  array_1                                  
@@ -341,9 +341,9 @@ n/a   UNDEFED   __c_args__
 0     00000000  code_start                               
 0     000081d1  dmaCh6ISR                                
 1     0000aaa1  done                                     
-0     0000b722  error                                    
+0     0000b720  error                                    
 0     0000847e  exit                                     
-0     0000b724  initDMA                                  
+0     0000b722  initDMA                                  
 0     0000b6db  main                                     
 0     00008552  memcpy                                   
 
@@ -384,16 +384,16 @@ page  address   name
 0     00008589  SysCtl_getLowSpeedClock                  
 0     000085ba  _c_int00                                 
 0     000085d1  Interrupt_defaultHandler                 
-0     00008667  __TI_zero_init_nomemset                  
-0     00008674  _args_main                               
-0     00008680  Interrupt_illegalOperationHandler        
-0     0000868a  Interrupt_nmiHandler                     
-0     0000869d  _register_unlock                         
-0     000086a1  _register_lock                           
-0     000086a5  _nop                                     
-0     000086ae  __TI_decompress_none                     
-0     000086bd  _system_pre_init                         
-0     000086bf  _system_post_cinit                       
+0     0000865a  __TI_zero_init_nomemset                  
+0     00008667  _args_main                               
+0     0000867e  Interrupt_illegalOperationHandler        
+0     00008688  Interrupt_nmiHandler                     
+0     0000869b  _register_unlock                         
+0     0000869f  _register_lock                           
+0     000086a3  _nop                                     
+0     000086ac  __TI_decompress_none                     
+0     000086bb  _system_pre_init                         
+0     000086bd  _system_post_cinit                       
 0     0000b0ae  Device_init                              
 0     0000b0f0  Device_enableAllPeripherals              
 0     0000b1db  Device_initGPIO                          
@@ -408,9 +408,9 @@ page  address   name
 0     0000b3fe  Example_done                             
 0     0000b3ff  SysCtl_setClock                          
 0     0000b6db  main                                     
-0     0000b722  error                                    
-0     0000b724  initDMA                                  
-0     0000b758  DMA_configMode                           
+0     0000b720  error                                    
+0     0000b722  initDMA                                  
+0     0000b756  DMA_configMode                           
 1     00000400  __stack                                  
 1     00000500  __TI_STACK_END                           
 1     0000aaa1  done                                     
