@@ -70,7 +70,7 @@
 // Defines
 //
 #define BURST       8       // write 8 to the register for a burst size of 8
-#define TRANSFER    16      // [(MEM_BUFFER_SIZE/(BURST)]
+#define TRANSFER    100      // [(MEM_BUFFER_SIZE/(BURST)]
 
 //
 // Globals
@@ -206,8 +206,8 @@ void initDMA()
     // configure DMA CH6
     //
     DMA_configAddresses(DMA_CH6_BASE, destAddr, srcAddr);
-    DMA_configBurst(DMA_CH6_BASE,8,1,1);
-    DMA_configTransfer(DMA_CH6_BASE,100,1,1);
+    DMA_configBurst(DMA_CH6_BASE,BURST,1,1);
+    DMA_configTransfer(DMA_CH6_BASE,TRANSFER,1,1);
     DMA_configMode(DMA_CH6_BASE,DMA_TRIGGER_SOFTWARE, DMA_CFG_ONESHOT_DISABLE);
     DMA_setInterruptMode(DMA_CH6_BASE,DMA_INT_AT_END);
     DMA_enableTrigger(DMA_CH6_BASE);
