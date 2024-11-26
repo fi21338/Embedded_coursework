@@ -12,8 +12,8 @@
 //
 // Defines
 //
-#define BURST       8       // write 8 to the register for a burst size of 8
-#define TRANSFER    13     // [(MEM_BUFFER_SIZE/(BURST)]
+#define BURST       10       // write 8 to the register for a burst size of 8
+#define TRANSFER    10     // [(MEM_BUFFER_SIZE/(BURST)]
 
 //
 // Globals
