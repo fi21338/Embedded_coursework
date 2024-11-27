@@ -1,7 +1,7 @@
 ******************************************************************************
-             TMS320C2000 Linker Unix v22.6.1                   
+             TMS320C2000 Linker PC v22.6.1                     
 ******************************************************************************
->> Linked Tue Nov 26 21:31:48 2024
+>> Linked Wed Nov 27 18:37:33 2024
 
 OUTPUT FILE NAME:   <Group35_task5.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -39,7 +39,7 @@ PAGE 0:
 PAGE 1:
   BOOT_RSVD             00000002   00000121  00000000  00000121  RWIX
   RAMM1                 00000400   000003f8  00000100  000002f8  RWIX
-  RAMLS5                0000a800   00000800  000002b2  0000054e  RWIX
+  RAMLS5                0000a800   00000800  0000029c  00000564  RWIX
   RAMD1                 0000b800   00000800  00000000  00000800  RWIX
   RAMGS0                0000c000   00001000  00000064  00000f9c  RWIX
   RAMGS1                0000d000   00001000  00000064  00000f9c  RWIX
@@ -86,8 +86,8 @@ codestart
 .stack     1    00000400    00000100     UNINITIALIZED
                   00000400    00000100     --HOLE--
 
-.bss       1    0000aaa1    00000001     UNINITIALIZED
-                  0000aaa1    00000001     dma_ex1_gsram_transfer.obj (.bss)
+.bss       1    0000aa8b    00000001     UNINITIALIZED
+                  0000aa8b    00000001     dma_ex1_gsram_transfer.obj (.bss)
 
 .init_array 
 *          0    00000123    00000000     UNINITIALIZED
@@ -96,20 +96,20 @@ codestart
 *          0    00000123    00000004     
                   00000123    00000004     driverlib_eabi.lib : sysctl.obj (.TI.ramfunc)
 
-.const     1    0000a800    000002a1     
+.const     1    0000a800    0000028b     
                   0000a800    000000c2     driverlib_eabi.lib : sysctl.obj (.const:.string)
                   0000a8c2    000000bc                        : gpio.obj (.const:.string)
                   0000a97e    000000bb                        : dma.obj (.const:.string)
                   0000aa39    00000001     --HOLE-- [fill = 0]
-                  0000aa3a    00000053     dma_ex1_gsram_transfer.obj (.const:.string)
-                  0000aa8d    00000001     --HOLE-- [fill = 0]
-                  0000aa8e    00000013     device.obj (.const:.string)
+                  0000aa3a    0000003d     dma_ex1_gsram_transfer.obj (.const:.string)
+                  0000aa77    00000001     --HOLE-- [fill = 0]
+                  0000aa78    00000013     device.obj (.const:.string)
 
-.data      1    0000aaa2    00000010     UNINITIALIZED
-                  0000aaa2    00000006     device.obj (.data)
-                  0000aaa8    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
-                  0000aaae    00000002                            : _lock.c.obj (.data:_lock)
-                  0000aab0    00000002                            : _lock.c.obj (.data:_unlock)
+.data      1    0000aa8c    00000010     UNINITIALIZED
+                  0000aa8c    00000006     device.obj (.data)
+                  0000aa92    00000006     rts2800_fpu32_eabi.lib : exit.c.obj (.data)
+                  0000aa98    00000002                            : _lock.c.obj (.data:_lock)
+                  0000aa9a    00000002                            : _lock.c.obj (.data:_unlock)
 
 ramgs0     1    0000c000    00000064     UNINITIALIZED
                   0000c000    00000064     dma_ex1_gsram_transfer.obj (ramgs0)
@@ -186,18 +186,18 @@ MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
-    ./
-       dma_ex1_gsram_transfer.obj    409    83        201    
+    .\
+       dma_ex1_gsram_transfer.obj    409    61        201    
     +--+-----------------------------+------+---------+---------+
-       Total:                        409    83        201    
+       Total:                        409    61        201    
                                                              
-    ./device/
+    .\device\
        device.obj                    1023   19        6      
        F2837xD_CodeStartBranch.obj   10     0         0      
     +--+-----------------------------+------+---------+---------+
        Total:                        1033   19        6      
                                                              
-    /Users/younishubsey/Desktop/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib_eabi.lib
+    C:\ti\C2000Ware_5_03_00_00\driverlib\f2837xd\driverlib\ccs\Debug\driverlib_eabi.lib
        sysctl.obj                    1187   194       0      
        dma.obj                       344    187       0      
        gpio.obj                      228    188       0      
@@ -205,7 +205,7 @@ MODULE SUMMARY
     +--+-----------------------------+------+---------+---------+
        Total:                        1973   569       0      
                                                              
-    /Users/younishubsey/Desktop/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib/rts2800_fpu32_eabi.lib
+    C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32_eabi.lib
        fs_div28.asm.obj              136    0         0      
        copy_decompress_lzss.c.obj    48     0         0      
        exit.c.obj                    41     0         6      
@@ -224,15 +224,15 @@ MODULE SUMMARY
        Stack:                        0      0         256    
        Linker Generated:             0      143       0      
     +--+-----------------------------+------+---------+---------+
-       Grand Total:                  3780   814       473    
+       Grand Total:                  3780   792       473    
 
 
 LINKER GENERATED COPY TABLES
 
 __TI_cinit_table @ 000001a8 records: 4, size/record: 4, table size: 16
 	ramgs0: load addr=00000128, load size=00000068 bytes, run addr=0000c000, run size=00000064 bytes, compression=copy
-	.data: load addr=00000190, load size=00000009 bytes, run addr=0000aaa2, run size=00000010 bytes, compression=lzss
-	.bss: load addr=000001a0, load size=00000004 bytes, run addr=0000aaa1, run size=00000001 bytes, compression=zero_init
+	.data: load addr=00000190, load size=00000009 bytes, run addr=0000aa8c, run size=00000010 bytes, compression=lzss
+	.bss: load addr=000001a0, load size=00000004 bytes, run addr=0000aa8b, run size=00000001 bytes, compression=zero_init
 	ramgs1: load addr=000001a4, load size=00000004 bytes, run addr=0000d000, run size=00000064 bytes, compression=zero_init
 
 
@@ -250,15 +250,15 @@ address     data page           name
 --------    ----------------    ----
 00000400      10 (00000400)     __stack
 
-0000aaa1     2aa (0000aa80)     done
-0000aaa2     2aa (0000aa80)     Example_Result
-0000aaa4     2aa (0000aa80)     Example_PassCount
-0000aaa6     2aa (0000aa80)     Example_Fail
-0000aaa8     2aa (0000aa80)     __TI_enable_exit_profile_output
-0000aaaa     2aa (0000aa80)     __TI_cleanup_ptr
-0000aaac     2aa (0000aa80)     __TI_dtors_ptr
-0000aaae     2aa (0000aa80)     _lock
-0000aab0     2aa (0000aa80)     _unlock
+0000aa8b     2aa (0000aa80)     done
+0000aa8c     2aa (0000aa80)     Example_Result
+0000aa8e     2aa (0000aa80)     Example_PassCount
+0000aa90     2aa (0000aa80)     Example_Fail
+0000aa92     2aa (0000aa80)     __TI_enable_exit_profile_output
+0000aa94     2aa (0000aa80)     __TI_cleanup_ptr
+0000aa96     2aa (0000aa80)     __TI_dtors_ptr
+0000aa98     2aa (0000aa80)     _lock
+0000aa9a     2aa (0000aa80)     _unlock
 
 0000c000     300 (0000c000)     array_1
 
@@ -282,9 +282,9 @@ page  address   name
 0     0000b1fc  Device_enableUnbondedGPIOPullupsFor176Pin
 0     0000b0ae  Device_init                              
 0     0000b1db  Device_initGPIO                          
-1     0000aaa6  Example_Fail                             
-1     0000aaa4  Example_PassCount                        
-1     0000aaa2  Example_Result                           
+1     0000aa90  Example_Fail                             
+1     0000aa8e  Example_PassCount                        
+1     0000aa8c  Example_Result                           
 0     0000b3fe  Example_done                             
 0     0000b3f9  Example_setResultFail                    
 0     0000b3f4  Example_setResultPass                    
@@ -313,11 +313,11 @@ page  address   name
 1     00000500  __TI_STACK_END                           
 abs   00000100  __TI_STACK_SIZE                          
 0     00008451  __TI_auto_init_nobinit_nopinit           
-1     0000aaaa  __TI_cleanup_ptr                         
+1     0000aa94  __TI_cleanup_ptr                         
 0     00008421  __TI_decompress_lzss                     
 0     000086ac  __TI_decompress_none                     
-1     0000aaac  __TI_dtors_ptr                           
-1     0000aaa8  __TI_enable_exit_profile_output          
+1     0000aa96  __TI_dtors_ptr                           
+1     0000aa92  __TI_enable_exit_profile_output          
 abs   ffffffff  __TI_pprof_out_hndl                      
 abs   ffffffff  __TI_prof_data_size                      
 abs   ffffffff  __TI_prof_data_start                     
@@ -328,19 +328,19 @@ n/a   UNDEFED   __c_args__
 1     00000400  __stack                                  
 0     00008667  _args_main                               
 0     000085ba  _c_int00                                 
-1     0000aaae  _lock                                    
+1     0000aa98  _lock                                    
 0     000086a3  _nop                                     
 0     0000869f  _register_lock                           
 0     0000869b  _register_unlock                         
 0     000086bd  _system_post_cinit                       
 0     000086bb  _system_pre_init                         
-1     0000aab0  _unlock                                  
+1     0000aa9a  _unlock                                  
 0     0000847c  abort                                    
 1     0000c000  array_1                                  
 1     0000d000  array_2                                  
 0     00000000  code_start                               
 0     000081d1  dmaCh6ISR                                
-1     0000aaa1  done                                     
+1     0000aa8b  done                                     
 0     0000b720  error                                    
 0     0000847e  exit                                     
 0     0000b722  initDMA                                  
@@ -413,15 +413,15 @@ page  address   name
 0     0000b756  DMA_configMode                           
 1     00000400  __stack                                  
 1     00000500  __TI_STACK_END                           
-1     0000aaa1  done                                     
-1     0000aaa2  Example_Result                           
-1     0000aaa4  Example_PassCount                        
-1     0000aaa6  Example_Fail                             
-1     0000aaa8  __TI_enable_exit_profile_output          
-1     0000aaaa  __TI_cleanup_ptr                         
-1     0000aaac  __TI_dtors_ptr                           
-1     0000aaae  _lock                                    
-1     0000aab0  _unlock                                  
+1     0000aa8b  done                                     
+1     0000aa8c  Example_Result                           
+1     0000aa8e  Example_PassCount                        
+1     0000aa90  Example_Fail                             
+1     0000aa92  __TI_enable_exit_profile_output          
+1     0000aa94  __TI_cleanup_ptr                         
+1     0000aa96  __TI_dtors_ptr                           
+1     0000aa98  _lock                                    
+1     0000aa9a  _unlock                                  
 1     0000c000  array_1                                  
 1     0000d000  array_2                                  
 abs   00000100  __TI_STACK_SIZE                          

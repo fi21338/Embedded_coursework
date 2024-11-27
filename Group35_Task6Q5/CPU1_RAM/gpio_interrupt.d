@@ -1,7 +1,7 @@
 # FIXED
 
 gpio_interrupt.obj: ../gpio_interrupt.c
-gpio_interrupt.obj: C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/driverlib.h
+gpio_interrupt.obj: C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/driverlib.h
 gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/adc.h
 gpio_interrupt.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h
@@ -87,13 +87,13 @@ gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/upp.h
 gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/version.h
 gpio_interrupt.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
-gpio_interrupt.obj: C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h
+gpio_interrupt.obj: C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h
 gpio_interrupt.obj: syscfg/board.h
-gpio_interrupt.obj: C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h
+gpio_interrupt.obj: C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h
 
 ../gpio_interrupt.c:
 
-C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/driverlib.h:
+C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/driverlib.h:
 
 C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
 
@@ -265,9 +265,9 @@ C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/version.h:
 
 C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
-C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h:
+C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h:
 
 syscfg/board.h:
 
-C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h:
+C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h:
 

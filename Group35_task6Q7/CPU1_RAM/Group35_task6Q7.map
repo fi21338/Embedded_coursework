@@ -1,7 +1,7 @@
 ******************************************************************************
-             TMS320C2000 Linker Unix v22.6.1                   
+             TMS320C2000 Linker PC v22.6.1                     
 ******************************************************************************
->> Linked Tue Nov 26 14:56:18 2024
+>> Linked Wed Nov 27 12:52:54 2024
 
 OUTPUT FILE NAME:   <Group35_task6Q7.out>
 ENTRY POINT SYMBOL: "code_start"  address: 00000000
@@ -174,18 +174,18 @@ MODULE SUMMARY
 
        Module                        code   ro data   rw data
        ------                        ----   -------   -------
-    ./
+    .\
        timer_ex1_cputimers.obj       433    172       5      
     +--+-----------------------------+------+---------+---------+
        Total:                        433    172       5      
                                                              
-    ./device/
+    .\device\
        device.obj                    1023   19        6      
        F2837xD_CodeStartBranch.obj   10     0         0      
     +--+-----------------------------+------+---------+---------+
        Total:                        1033   19        6      
                                                              
-    /Users/younishubsey/Desktop/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/ccs/Debug/driverlib_eabi.lib
+    C:\ti\C2000Ware_5_03_00_00\driverlib\f2837xd\driverlib\ccs\Debug\driverlib_eabi.lib
        sysctl.obj                    1187   194       0      
        gpio.obj                      310    188       0      
        interrupt.obj                 214    0         0      
@@ -193,7 +193,7 @@ MODULE SUMMARY
     +--+-----------------------------+------+---------+---------+
        Total:                        1753   480       0      
                                                              
-    /Users/younishubsey/Desktop/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib/rts2800_fpu32_eabi.lib
+    C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-c2000_22.6.1.LTS\lib\rts2800_fpu32_eabi.lib
        fs_div28.asm.obj              136    0         0      
        copy_decompress_lzss.c.obj    48     0         0      
        exit.c.obj                    41     0         6      

@@ -2,7 +2,7 @@
 
 syscfg/board.obj: syscfg/board.c
 syscfg/board.obj: syscfg/board.h
-syscfg/board.obj: C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/driverlib.h
+syscfg/board.obj: C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/driverlib.h
 syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h
 syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/adc.h
 syscfg/board.obj: C:/ti/ccs1281/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include/stdbool.h
@@ -88,13 +88,13 @@ syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/upp.h
 syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_upp.h
 syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/version.h
 syscfg/board.obj: C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h
-syscfg/board.obj: C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h
+syscfg/board.obj: C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h
 
 syscfg/board.c:
 
 syscfg/board.h:
 
-C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/driverlib.h:
+C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/driverlib.h:
 
 C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/inc/hw_memmap.h:
 
@@ -266,5 +266,5 @@ C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/version.h:
 
 C:/ti/C2000Ware_5_03_00_00/driverlib/f2837xd/driverlib/driver_inclusive_terminology_mapping.h:
 
-C:/Users/Artwi/workspace_v12/Group35_Task6Q5/device/device.h:
+C:/Users/Artwi/Documents/GitHub/Embedded_coursework/Group35_Task6Q5/device/device.h:
 

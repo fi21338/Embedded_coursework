@@ -1,7 +1,7 @@
 ******************************************************************************
-                  TI ARM Linker Unix v20.2.7                   
+                  TI ARM Linker PC v20.2.7                     
 ******************************************************************************
->> Linked Fri Nov  8 16:48:33 2024
+>> Linked Wed Nov 27 12:53:09 2024
 
 OUTPUT FILE NAME:   <task-1.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 000048b0
@@ -168,12 +168,12 @@ MODULE SUMMARY
 
        Module                       code    ro data   rw data
        ------                       ----    -------   -------
-    ./
+    .\
        main.obj                     508     0         16     
     +--+----------------------------+-------+---------+---------+
        Total:                       508     0         16     
                                                              
-    /Applications/ti/ccs1280/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib/rtsv4_A_be_eabi.lib
+    C:\ti\ccs1281\ccs\tools\compiler\ti-cgt-arm_20.2.7.LTS\lib\rtsv4_A_be_eabi.lib
        _printfi.c.obj               7465    0         0      
        memory.c.obj                 1120    0         8      
        ull_div32.asm.obj            700     0         0      
